@@ -10,6 +10,7 @@ soup = BeautifulSoup(response.text, "html.parser")
 courses = soup.findAll("div", class_="courseblock")
 course_descriptions = soup.findAll("p", class_="courseblockdesc")
 
+
 data = []
 i = 0
 # TODO make the logic better (find next sibling
