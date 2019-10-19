@@ -1,3 +1,4 @@
+[
 {"name": "CS\u00a0100", "ptag": "\nIntroduction to Computer Science as a field and career for computer science majors. Overview of the field and specific examples of problem areas and methods of solution.\n"},
 {"name": "CS\u00a0101", "ptag": "\nFundamental principles, concepts, and methods of computing, with emphasis on applications in the physical sciences and engineering. Basic problem solving and programming techniques; fundamental algorithms and data structures; use of computers in solving engineering and scientific problems. Intended for engineering and science majors. Prerequisite: MATH\u00a0220 or MATH\u00a0221. This course satisfies the General Education Criteria for:Quantitative Reasoning II"},
 {"name": "CS\u00a0102", "ptag": "\nSame as INFO\u00a0102. See INFO\u00a0102.\n"},
@@ -117,3 +118,4 @@
 {"name": "CS\u00a0597", "ptag": "\nIndividual study or reading in a subject not covered in normal course offerings. May be repeated. Prerequisite: Consent of instructor.\n"},
 {"name": "CS\u00a0598", "ptag": "\nSubject offerings of new and developing areas of knowledge in computer science intended to augment the existing curriculum. See Class Schedule or departmental course information for topics and prerequisites. May be repeated in the same or separate terms if topics vary.\n"},
 {"name": "CS\u00a0599", "ptag": "\nApproved for S/U grading only. May be repeated.\n"},
+]
