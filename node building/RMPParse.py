@@ -19,6 +19,7 @@ def addProfessor(subSoup, name):
     return uuid, grade, name.replace(r"%2C+", r", ")
 
 
+
 def parseURL(query):
 
     url = f'https://www.ratemyprofessors.com/search.jsp?query={query}'
