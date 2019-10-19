@@ -1,5 +1,6 @@
 import urllib.request
 from bs4 import BeautifulSoup
+import json
 
 def addProfessor(subSoup, name):
     teacher_url = subSoup.a['href']
@@ -15,6 +16,7 @@ def addProfessor(subSoup, name):
 
     print(uuid, grade, name.replace(r"%2C+", r", "))
 
+    return uuid, grade, name.replace(r"%2C+", r", ")
 
 
 def parseURL(query):
@@ -29,8 +31,15 @@ def parseURL(query):
         subSoup = BeautifulSoup(str(professor), 'html.parser')
         school = subSoup.find("span", {"class": "sub"}).get_text()
         if "University Of Illinois at Urbana - Champaign" in school:
-            addProfessor(subSoup, query)
+            uuid, grade, name = addProfessor(subSoup, query)
+            j_dump = json.dumps({
+                'uuid': uuid,
+                'grade': grade,
+                'name': name
+            }, sort_keys=True, indent=4)
+            print(j_dump)
 
 parseURL("Chen%2C+Yuting")
+
 
 
