@@ -1,6 +1,7 @@
 # author timothy vitkin
 import requests
 import re
+import json
 from bs4 import BeautifulSoup
 
 url = 'http://catalog.illinois.edu/courses-of-instruction/cs/'
@@ -23,6 +24,13 @@ def get_params(courses):
         ptag = course.findAll("p", {"class": "courseblockdesc"})[0].get_text()
         alias = ""
         preqs = []
+
+        j_dump = json.dumps({
+            'name': name,
+            'ptag': ptag
+        })
+        with open('courses.json', 'a') as the_file:
+            the_file.write(j_dump+',\n')
 
         if "Same as" in ptag:
             alias = ptag.split("See ")[-1]
