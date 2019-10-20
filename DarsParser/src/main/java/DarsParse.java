@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.io.RandomAccessRead;
@@ -17,7 +18,7 @@ public class DarsParse {
     private String DARPtext;
     ArrayList<String> completedClasses = new ArrayList<String>();
     ArrayList<String> selectClasses = new ArrayList<String>();
-    Gson gson = new Gson();
+    Gson gson = new GsonBuilder().create();
 
 
     public DarsParse(File in) throws IOException {
@@ -71,18 +72,11 @@ public class DarsParse {
         while(getSelect.find()) {
             selectClasses.add(getSelect.group(1));
         }
-        for(int i = 0; i < completedClasses.size(); i++){
-            System.out.println(completedClasses.get(i));
-        }
-        Classes[] completeClasses = new Classes[completedClasses.size()];
-        for(int i = 0; i < completeClasses.length; i++){
-            String [] classNameNum = completedClasses.get(i).split(" ");
-            System.out.print(classNameNum[0]);
-            completeClasses[i] = new Classes(classNameNum[0], Integer.parseInt(classNameNum[1]));
-        }
+        System.out.print(DARPtext);
 
-
-        gson.toJson(completeClasses, new FileWriter("test.json"));
+        Writer writer = new FileWriter("test.json");
+        gson.toJson(completedClasses, writer);
+        writer.close();
 
     }
 
