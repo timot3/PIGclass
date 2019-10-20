@@ -1,5 +1,7 @@
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.io.RandomAccessRead;
@@ -18,7 +20,7 @@ public class DarsParse {
     private String DARPtext;
     ArrayList<String> completedClasses = new ArrayList<String>();
     ArrayList<String> selectClasses = new ArrayList<String>();
-    Gson gson = new GsonBuilder().create();
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
     public DarsParse(File in) throws IOException {
@@ -67,21 +69,29 @@ public class DarsParse {
         Matcher getCompleted = Pattern.compile("[A-Z]{2}\\d{2}\\s([A-Z]+\\s\\d{3})").matcher(DARPtext);
         while(getCompleted.find()) {
             completedClasses.add(getCompleted.group(1));
+
         }
         Matcher getSelect = Pattern.compile("\\s[A-Z]{4}: ([A-Z]+ \\d+.+)").matcher(DARPtext);
         while(getSelect.find()) {
             selectClasses.add(getSelect.group(1));
         }
-        System.out.print(DARPtext);
 
-        Writer writer = new FileWriter("test.json");
-        gson.toJson(completedClasses, writer);
+        String[] finishedClasses = new String[completedClasses.size()];
+        for(int i = 0; i < completedClasses.size(); i++){
+            finishedClasses[i] = completedClasses.get(i);
+        }
+        Finished finClass = new Finished(finishedClasses);
+        Classes classes = new Classes(null, finishedClasses);
+
+        Writer writer = new FileWriter("test2.json");
+        gson.toJson(finClass, writer);
         writer.close();
+        System.out.print(getDARPtext());
 
     }
 
 
     public static void main(String[] args) throws IOException {
-        DarsParse convert = new DarsParse(new File("C:\\Users\\Quinn Collins\\Downloads\\Audit[213].pdf"));
+        DarsParse convert = new DarsParse(new File("C:\\Users\\Quinn Collins\\Downloads\\dars_cs[214].pdf"));
     }
 }

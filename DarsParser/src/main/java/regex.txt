@@ -1,0 +1,2 @@
+REGEX FOR MAJOR:([[:upper:]][a-z]+, [[:upper:]][a-z]+.+\n(.*))
+REGEX FOR TECHNICAL ELECTIVES ECE: .*\(.+REQ\)

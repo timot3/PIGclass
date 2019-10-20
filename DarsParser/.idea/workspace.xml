@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b8ce8e3-d2e9-43cc-ba6c-2563b2d9b034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Finished.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Required.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Classes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DarsParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DarsParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Completed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Finished.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Finished.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Required.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Required.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regex.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Classes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Classes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DarsParse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DarsParse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Finished.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Finished.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Required.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Required.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
     </list>
@@ -126,7 +128,7 @@
       <workItem from="1571462583104" duration="173000" />
       <workItem from="1571462810629" duration="111000" />
       <workItem from="1571463339664" duration="12999000" />
-      <workItem from="1571538520056" duration="1281000" />
+      <workItem from="1571538520056" duration="8645000" />
     </task>
     <servers />
   </component>
