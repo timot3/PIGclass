@@ -1,8 +1,9 @@
+import java.util.ArrayList;
+
 public class Classes {
-    private String name;
-    private int classNum;
-    Classes(String name, int classNum) {
-        this.name = name;
-        this.classNum = classNum;
+    private ArrayList<String> names;
+    Classes(ArrayList<String> names) {
+        this.names = names;
+
     }
 }
