@@ -1,0 +1,6 @@
+DARS:
+REGEX FOR MAJOR:([[:upper:]][a-z]+, [[:upper:]][a-z]+.+\n(.*))
+REGEX FOR TECHNICAL ELECTIVES ECE: .*\(.+REQ\)
+
+CSV:
+Prerequisite: (One of \w{2,5} \d{3}.+\n|\w{2,5} \d{3}.+\n|Concurrent.+\n|As spec.+\n|For.+\n) 
