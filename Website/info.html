@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="scripts/normalize.css">
+  <link rel="stylesheet" href="scripts/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/icon.jpg">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>Info</h4>
+        <p>We wanted to make finding classes based on your interests, degree requitements, and time left in college easier.
+          Essentially we're creating a system where it's easier for you to plan out your 8 semesters (or however many you
+            have left) here at UIUC in a simple and intuitive manner.
+          We still have a lot to get through to make this system great.</p>
+        <p>If you have any suggestions for improvements (whether that be bugs you've found or future features, or something
+          else entirely), send them to us using the forum below:</p> <br>
+
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Your email</label>
+              <input class="u-full-width" type="email" placeholder="sample@illinois.edu" id="emailInput">
+            </div>
+            <div class="six columns">
+              <label for="exampleRecipientInput">Reason for contacting</label>
+              <select class="u-full-width" id="input">
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Suggestion</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <label for="message">Message</label>
+          <textarea class="u-full-width" placeholder="..." id="message"></textarea>
+
+          <!-- TODO: make the forum actually send us an email -->
+
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+
+        <p>Made by some freshman at UIUC</p><br>
+        <button onclick="window.location.href = 'https://github.com/timot3/PIGclass';">Github Repo</button></br>
+        <button onclick="window.location.href = 'index.html';">Back</button></br>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
