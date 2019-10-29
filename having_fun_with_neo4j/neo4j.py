@@ -1,7 +1,8 @@
-file = r"D:\Downloads\2019-fa.csv"
-
 import pandas as pd
 import re
+
+file = '2019-fa.csv'
+
 classes  = []
 
 class Class:
@@ -27,9 +28,9 @@ class Class:
         self.attr = attrs
 
 def get_rels(preqs):
-        if "OR" in preqs:
-            get_rels(preqs[:preqs.find("OR")-1])
-            get_rels(preqs[preqs.find("OR")+3:])
+    if "OR" in preqs:
+        get_rels(preqs[:preqs.find("OR")-1])
+        get_rels(preqs[preqs.find("OR")+3:])
         
 def main():
     ca = pd.read_csv(file)
@@ -40,7 +41,7 @@ def main():
         title = sub + " " + str(num)
         desc = r["Description"]
         hours = r["Credit Hours"]
-        preqs = r["Section Info"]
+        preqs = str(r["Section Info"]) # as a string
         attrs = r["Degree Attributes"]
         c = Class(sub, num, name, title, desc, hours, preqs, attrs)
         classes.append(c)
