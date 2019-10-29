@@ -1,5 +1,5 @@
 import pandas as pd
-import re
+import re  # regex
 
 file = '2019-fa.csv'
 
@@ -9,8 +9,11 @@ class Class:
     def __init__(self, sub, num, name, title, desc, hours, preqs, attrs):
         self.subject = sub
         self.number = num
-        if len(str(num)) != 3:
+
+        if sub == "MCB":
             print(title)
+            print(desc + '\n')
+
         self.name = name
         self.title = title
         self.desc = desc
